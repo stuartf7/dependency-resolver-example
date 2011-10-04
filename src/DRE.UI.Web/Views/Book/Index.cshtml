@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DRE.Model.Book>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Book List</title>
+    </head>
+    <body>
+        <div>
+              @foreach (var book in Model)
+              {
+                  <p><strong>@book.Name</strong> by <i>@book.Author</i> (@book.ISBN)</p>
+              }
+        </div>
+    </body>
+</html>
